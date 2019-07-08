@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".DetailActivity">
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/imageViewPhoto"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorTitle"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewPhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textViewName"
+        android:layout_alignRight="@id/textViewAddressLabel"
+        android:text="Tel.:" />
+
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewPhoneLabel"
+        android:layout_alignLeft="@id/textViewAddress"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textViewPhoneLabel"
+        android:layout_alignRight="@id/textViewAddressLabel"
+        android:text="Email: " />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewEmailLabel"
+        android:layout_alignLeft="@id/textViewAddress"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/textViewEmailLabel"
+        android:text="Address: " />
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewAddressLabel"
+        android:layout_toRightOf="@id/textViewAddressLabel"
+        android:layout_marginLeft="10dp"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAddress"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButtonPhoneCall"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:contentDescription="Phone call"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/call" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPhoneMessage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Send a message"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/sms" />
+    </LinearLayout>
+
+</RelativeLayout>
